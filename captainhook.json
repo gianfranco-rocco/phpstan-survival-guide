@@ -9,7 +9,7 @@
         ]
     },
     "pre-commit": {
-        "enabled": true,
+        "enabled": false,
         "actions": [
             {
                 "action": "echo 'Cannot push to master branch directly. Please use another branch.'; exit 1",

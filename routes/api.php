@@ -2,10 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use Lightit\Backoffice\Users\App\Controllers\DeleteUserController;
-use Lightit\Backoffice\Users\App\Controllers\GetUserController;
-use Lightit\Backoffice\Users\App\Controllers\ListUserController;
-use Lightit\Backoffice\Users\App\Controllers\StoreUserController;
+use Lightit\PHPStanSurvivalGuide\Users\App\Controllers\DeleteUserController;
+use Lightit\PHPStanSurvivalGuide\Users\App\Controllers\GetUserController;
+use Lightit\PHPStanSurvivalGuide\Users\App\Controllers\ListUserController;
+use Lightit\PHPStanSurvivalGuide\Users\App\Controllers\StoreUserController;
 
 /*
 |--------------------------------------------------------------------------

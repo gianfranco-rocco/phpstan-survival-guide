@@ -6,8 +6,8 @@ namespace Tests\Feature\Users;
 
 use Database\Factories\UserFactory;
 use Illuminate\Support\Collection;
-use Lightit\Backoffice\Users\App\Transformers\UserTransformer;
-use Lightit\Backoffice\Users\Domain\Models\User;
+use Lightit\PHPStanSurvivalGuide\Users\App\Transformers\UserTransformer;
+use Lightit\PHPStanSurvivalGuide\Users\Domain\Models\User;
 use function Pest\Laravel\getJson;
 
 describe('users', function () {

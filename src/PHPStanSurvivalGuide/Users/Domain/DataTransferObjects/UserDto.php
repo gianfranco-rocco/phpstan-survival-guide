@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Lightit\Backoffice\Users\Domain\DataTransferObjects;
+namespace Lightit\PHPStanSurvivalGuide\Users\Domain\DataTransferObjects;
 
 class UserDto
 {

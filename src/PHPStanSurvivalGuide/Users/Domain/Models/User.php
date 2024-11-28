@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Lightit\Backoffice\Users\Domain\Models;
+namespace Lightit\PHPStanSurvivalGuide\Users\Domain\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 

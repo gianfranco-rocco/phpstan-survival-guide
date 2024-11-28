@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Lightit\Backoffice\Users\App\Controllers;
+namespace Lightit\PHPStanSurvivalGuide\Users\App\Controllers;
 
 use Illuminate\Http\JsonResponse;
-use Lightit\Backoffice\Users\App\Request\StoreUserRequest;
-use Lightit\Backoffice\Users\App\Transformers\UserTransformer;
-use Lightit\Backoffice\Users\Domain\Actions\StoreUserAction;
+use Lightit\PHPStanSurvivalGuide\Users\App\Request\StoreUserRequest;
+use Lightit\PHPStanSurvivalGuide\Users\App\Transformers\UserTransformer;
+use Lightit\PHPStanSurvivalGuide\Users\Domain\Actions\StoreUserAction;
 
 class StoreUserController
 {

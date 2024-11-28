@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Lightit\Backoffice\Users\App\Notifications;
+namespace Lightit\PHPStanSurvivalGuide\Users\App\Notifications;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
-use Lightit\Backoffice\Users\Domain\Models\User;
+use Lightit\PHPStanSurvivalGuide\Users\Domain\Models\User;
 
 class UserRegistered extends Notification
 {

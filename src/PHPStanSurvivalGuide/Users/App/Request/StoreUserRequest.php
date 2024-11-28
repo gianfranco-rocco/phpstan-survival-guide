@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Lightit\Backoffice\Users\App\Request;
+namespace Lightit\PHPStanSurvivalGuide\Users\App\Request;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rules\Password;
-use Lightit\Backoffice\Users\Domain\DataTransferObjects\UserDto;
+use Lightit\PHPStanSurvivalGuide\Users\Domain\DataTransferObjects\UserDto;
 
 class StoreUserRequest extends FormRequest
 {

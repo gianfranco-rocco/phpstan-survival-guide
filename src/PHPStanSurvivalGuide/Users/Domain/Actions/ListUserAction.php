@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Lightit\Backoffice\Users\Domain\Actions;
+namespace Lightit\PHPStanSurvivalGuide\Users\Domain\Actions;
 
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
-use Lightit\Backoffice\Users\Domain\Models\User;
+use Lightit\PHPStanSurvivalGuide\Users\Domain\Models\User;
 use Spatie\QueryBuilder\QueryBuilder;
 
 class ListUserAction
