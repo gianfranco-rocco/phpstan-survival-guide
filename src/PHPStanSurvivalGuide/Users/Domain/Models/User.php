@@ -36,8 +36,9 @@ use Lightit\PHPStanSurvivalGuide\Posts\Domain\Models\Post;
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Laravel\Sanctum\PersonalAccessToken> $tokens
  * @property-read int|null $tokens_count
  * @property-read Role|null $role
-//  * @property-read EloquentCollection<int, Activity> $textActivities //Covariant error
-//  * @property-read EloquentCollection<int, Activity> $videoActivities //Covariant error
+  * @property-read EloquentCollection<int, Activity> $textActivities // Error 1  (less common)
+  * @property-read EloquentCollection<int, Activity> $videoActivities // Error 1 (less common)
+  * @property-read int $quantity // Error 2.2 (less common)
  *
  * @method static \Illuminate\Database\Eloquent\Builder|User newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|User newQuery()
