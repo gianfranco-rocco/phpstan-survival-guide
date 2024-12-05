@@ -7,9 +7,11 @@ namespace Lightit\PHPStanSurvivalGuide\Users\Domain\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Lightit\PHPStanSurvivalGuide\Posts\Domain\Models\Post;
 
 /**
  * Domain\Users\Models\User
@@ -22,10 +24,12 @@ use Laravel\Sanctum\HasApiTokens;
  * @property string|null                     $remember_token
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Illuminate\Support\Carbon|null $two_factor_auth_enabled_at
  * @property-read \Illuminate\Notifications\DatabaseNotificationCollection<int, \Illuminate\Notifications\DatabaseNotification> $notifications
  * @property-read int|null $notifications_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Laravel\Sanctum\PersonalAccessToken> $tokens
  * @property-read int|null $tokens_count
+ * @property-read Role|null $role
  *
  * @method static \Illuminate\Database\Eloquent\Builder|User newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|User newQuery()
@@ -96,4 +100,17 @@ class User extends Authenticatable
             },
         );
     }
+
+    /**
+     * @return HasOne<Role, $this>
+     */
+    public function role(): HasOne
+    {
+        return $this->hasOne(Role::class);
+    }
+
+    // public function post(): HasOne
+    // {
+    //     return $this->hasOne(Post::class);
+    // }
 }
