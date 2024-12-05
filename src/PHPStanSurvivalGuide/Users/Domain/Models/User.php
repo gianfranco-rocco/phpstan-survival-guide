@@ -7,10 +7,16 @@ namespace Lightit\PHPStanSurvivalGuide\Users\Domain\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Collection as EloquentCollection;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Collection as SupportCollection;
 use Laravel\Sanctum\HasApiTokens;
+use Lightit\PHPStanSurvivalGuide\Activities\Domain\Abstracts\Activity;
+use Lightit\PHPStanSurvivalGuide\Activities\Domain\Models\TextActivity;
+use Lightit\PHPStanSurvivalGuide\Activities\Domain\Models\VideoActivity;
 use Lightit\PHPStanSurvivalGuide\Posts\Domain\Models\Post;
 
 /**
@@ -30,6 +36,8 @@ use Lightit\PHPStanSurvivalGuide\Posts\Domain\Models\Post;
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Laravel\Sanctum\PersonalAccessToken> $tokens
  * @property-read int|null $tokens_count
  * @property-read Role|null $role
+//  * @property-read EloquentCollection<int, Activity> $textActivities //Covariant error
+//  * @property-read EloquentCollection<int, Activity> $videoActivities //Covariant error
  *
  * @method static \Illuminate\Database\Eloquent\Builder|User newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|User newQuery()
@@ -112,5 +120,36 @@ class User extends Authenticatable
     // public function post(): HasOne
     // {
     //     return $this->hasOne(Post::class);
+    // }
+
+    /*************************
+     * "Not covariant" error *
+     ************************/
+
+    // /**
+    //  * @return HasMany<TextActivity, $this>
+    //  */
+    // public function textActivities(): HasMany
+    // {
+    //     return $this->hasMany(TextActivity::class);
+    // }
+    
+    // /**
+    //  * @return HasMany<VideoActivity, $this>
+    //  */
+    // public function videoActivities(): HasMany
+    // {
+    //     return $this->hasMany(VideoActivity::class);
+    // }
+    
+    // /**
+    //  * @return SupportCollection<int, Activity>
+    //  */
+    // public function activities(): SupportCollection
+    // {
+    //     return $this
+    //         ->textActivities
+    //         ->merge($this->videoActivities)
+    //         ->toBase();
     // }
 }
